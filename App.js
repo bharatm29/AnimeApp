@@ -1,10 +1,10 @@
 import { PaperProvider as Provider } from "react-native-paper"
-import Home from "./components/Home";
+import BottomTabNavigation from "./components/BottomTabNavigation";
 
 export default function App(){
     return (
       <Provider>
-          <Home></Home>
+          <BottomTabNavigation></BottomTabNavigation>
       </Provider>
     );
 }
