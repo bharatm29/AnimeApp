@@ -4,7 +4,7 @@ import Home from "./Home";
 import Search from "./Search";
 import Profile from "./Profile";
 
-export default function BottomTabNavigation() {
+export default function BottomTabNavigation({ navigation }) {
     const [index, setIndex] = useState(0);
     const [routes] = useState([
         {
@@ -35,11 +35,11 @@ export default function BottomTabNavigation() {
         renderScene={({ route, jumpTo }) => {
             switch (route.key) {
                 case 'home':
-                    return <Home jumpTo={jumpTo} route={route}/>;
+                    return <Home jumpTo={jumpTo} route={route} />;
                 case 'search':
-                    return <Search jumpTo={jumpTo} />;
+                    return <Search navigation={navigation}/>;
                 case 'profile':
-                    return <Profile jumpTo={jumpTo} />;
+                    return <Profile />;
             }
         }}
         shifting={true}
